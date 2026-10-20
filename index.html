@@ -1,21 +1,776 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Independent software architect and developer with 20 years of experience building enterprise software.">
-<title>Alex Morgan — Software Architect & Developer</title>
-<style>
-:root{--bg:#0b1018;--panel:#121b28;--panel2:#172333;--text:#eef4fb;--muted:#9aacc1;--line:#28374a;--accent:#79e4c4;--accent2:#8eb8ff}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1140px,calc(100% - 48px));margin:auto}.nav{position:sticky;top:0;z-index:10;background:#0b1018e8;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.navinner{display:flex;align-items:center;justify-content:space-between;min-height:76px}.logo{font-weight:800;letter-spacing:-.04em;font-size:1.2rem}.logo span{color:var(--accent)}.links{display:flex;gap:28px;align-items:center}.links a{font-size:.9rem;color:var(--muted)}.links a:hover{color:var(--accent)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 20px;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:#091b1a;font-weight:750;transition:.2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.btn.outline{background:transparent;color:var(--text);border-color:#41536a}.btn.outline:hover{border-color:var(--accent)}.hero{padding:110px 0 100px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:650px;height:650px;border-radius:50%;background:radial-gradient(circle,#1c6a6850,transparent 65%);right:-210px;top:-160px;pointer-events:none}.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.18em;font-weight:750;font-size:.78rem}.hero h1{font-size:clamp(3rem,6.4vw,6rem);line-height:1.06;letter-spacing:-.065em;margin:24px 0;max-width:960px}.hero h1 em{font-style:normal;color:var(--accent)}.lead{font-size:clamp(1.1rem,2vw,1.35rem);color:var(--muted);max-width:710px}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:90px;padding-top:34px;border-top:1px solid var(--line);max-width:750px}.stat strong{display:block;font-size:2rem;letter-spacing:-.05em}.stat small{color:var(--muted)}section{padding:90px 0;border-top:1px solid var(--line)}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:38px}.sectionhead h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.15;letter-spacing:-.05em;margin:10px 0}.sectionhead p{max-width:490px;color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:30px;background:var(--panel);border:1px solid var(--line);border-radius:14px}.card .num{font-size:.85rem;color:var(--accent);font-weight:700}.card h3{font-size:1.25rem;letter-spacing:-.025em;margin:19px 0 10px}.card p{color:var(--muted);margin:0}.workgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.project{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel)}.projectvisual{min-height:200px;display:flex;align-items:center;justify-content:center;background:linear-gradient(130deg,#193c4a,#1b263b);padding:25px}.projectvisual.alt{background:linear-gradient(130deg,#263554,#174a48)}.diagram{width:min(100%,400px);display:flex;align-items:center;justify-content:center;gap:10px}.diagram span{padding:12px 14px;background:#0b1018a8;border:1px solid #6a9fa9;border-radius:8px;color:#d9f7f1;font-size:.8rem;text-align:center}.diagram b{color:var(--accent)}.projectbody{padding:28px}.tag{display:inline-block;font-size:.75rem;color:var(--accent2);background:#26364d;padding:4px 10px;border-radius:99px;margin:0 6px 8px 0}.project h3{font-size:1.3rem;margin:12px 0 8px}.project p{color:var(--muted);margin:0}.approach{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:start}.approach h2{font-size:clamp(2rem,4vw,3rem);line-height:1.14;letter-spacing:-.05em;margin:14px 0}.approach p{color:var(--muted)}.steps{display:grid;gap:20px}.step{display:flex;gap:20px;padding-bottom:20px;border-bottom:1px solid var(--line)}.step b{color:var(--accent);min-width:28px}.step strong{display:block}.step p{margin:4px 0 0;color:var(--muted)}.stack{display:flex;gap:10px;flex-wrap:wrap}.chip{padding:9px 14px;border:1px solid #35475d;border-radius:8px;color:#c9d8e8;background:var(--panel)}.contact{background:linear-gradient(140deg,#152b35,#101824);border-radius:20px;padding:65px}.contact h2{font-size:clamp(2rem,5vw,4rem);line-height:1.12;letter-spacing:-.05em;margin:16px 0}.contact p{color:var(--muted);max-width:620px}.footer{display:flex;justify-content:space-between;gap:20px;padding:35px 0;color:var(--muted);font-size:.85rem}.footer a:hover{color:var(--accent)}.menu{display:none}.mobilelinks{display:none}@media(max-width:780px){.links{display:none}.menu{display:block;background:none;border:1px solid var(--line);border-radius:8px;color:var(--text);padding:8px 12px}.mobilelinks.open{display:flex;flex-direction:column;align-items:start;gap:14px;padding:0 0 20px}.mobilelinks a{color:var(--muted)}.hero{padding:80px 0}.stats{margin-top:65px}.grid,.workgrid,.approach{grid-template-columns:1fr}.sectionhead{display:block}.contact{padding:38px 26px}section{padding:65px 0}}@media(max-width:480px){.wrap{width:min(100% - 32px,1140px)}.stats{gap:12px}.stat strong{font-size:1.55rem}.diagram{gap:5px}.diagram span{font-size:.65rem;padding:10px 6px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Alex Morgan is an independent software architect and developer with over 20 years of experience building enterprise software."
+  >
+
+  <meta name="theme-color" content="#0b1018">
+
+  <title>Alex Morgan — Software Architect & Developer</title>
+
+  <style>
+
+    /* =========================================
+       DESIGN VARIABLES
+    ========================================= */
+
+    :root {
+      --bg: #0b1018;
+      --panel: #121b28;
+      --panel2: #172333;
+      --text: #eef4fb;
+      --muted: #9aacc1;
+      --line: #28374a;
+      --accent: #79e4c4;
+      --accent2: #8eb8ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .wrap {
+      width: min(1140px, calc(100% - 48px));
+      margin: auto;
+    }
+
+    /* =========================================
+       NAVIGATION
+    ========================================= */
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #0b1018e8;
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .navinner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      font-size: 1.2rem;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .links a {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .links a:hover {
+      color: var(--accent);
+    }
+
+    .links .btn {
+      color: #091b1a;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .mobilelinks {
+      display: none;
+    }
+
+    /* =========================================
+       BUTTONS
+    ========================================= */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 20px;
+      border-radius: 8px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #091b1a;
+      font-weight: 750;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+    }
+
+    .btn.outline {
+      background: transparent;
+      color: var(--text);
+      border-color: #41536a;
+    }
+
+    .btn.outline:hover {
+      border-color: var(--accent);
+    }
+
+    /* =========================================
+       HERO
+    ========================================= */
+
+    .hero {
+      padding: 110px 0 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        #1c6a6850,
+        transparent 65%
+      );
+      right: -210px;
+      top: -160px;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 750;
+      font-size: 0.78rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 6.4vw, 6rem);
+      line-height: 1.06;
+      letter-spacing: -0.065em;
+      margin: 24px 0;
+      max-width: 960px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .lead {
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      color: var(--muted);
+      max-width: 710px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    /* =========================================
+       STATISTICS
+    ========================================= */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 90px;
+      padding-top: 34px;
+      border-top: 1px solid var(--line);
+      max-width: 750px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 2rem;
+      letter-spacing: -0.05em;
+    }
+
+    .stat small {
+      color: var(--muted);
+    }
+
+    /* =========================================
+       GENERAL SECTIONS
+    ========================================= */
+
+    section {
+      padding: 90px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .sectionhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 25px;
+      margin-bottom: 38px;
+    }
+
+    .sectionhead h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.15;
+      letter-spacing: -0.05em;
+      margin: 10px 0;
+    }
+
+    .sectionhead p {
+      max-width: 490px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* =========================================
+       SERVICES
+    ========================================= */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      padding: 30px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #41536a;
+    }
+
+    .card .num {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      letter-spacing: -0.025em;
+      margin: 19px 0 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* =========================================
+       PROJECTS
+    ========================================= */
+
+    .workgrid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .project {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--panel);
+    }
+
+    .projectvisual {
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(
+        130deg,
+        #193c4a,
+        #1b263b
+      );
+      padding: 25px;
+    }
+
+    .projectvisual.alt {
+      background: linear-gradient(
+        130deg,
+        #263554,
+        #174a48
+      );
+    }
+
+    .diagram {
+      width: min(100%, 400px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .diagram span {
+      padding: 12px 14px;
+      background: #0b1018a8;
+      border: 1px solid #6a9fa9;
+      border-radius: 8px;
+      color: #d9f7f1;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    .diagram b {
+      color: var(--accent);
+    }
+
+    .projectbody {
+      padding: 28px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--accent2);
+      background: #26364d;
+      padding: 4px 10px;
+      border-radius: 99px;
+      margin: 0 6px 8px 0;
+    }
+
+    .project h3 {
+      font-size: 1.3rem;
+      margin: 12px 0 8px;
+    }
+
+    .project p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* =========================================
+       APPROACH
+    ========================================= */
+
+    .approach {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: start;
+    }
+
+    .approach h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.14;
+      letter-spacing: -0.05em;
+      margin: 14px 0;
+    }
+
+    .approach p {
+      color: var(--muted);
+    }
+
+    .steps {
+      display: grid;
+      gap: 20px;
+    }
+
+    .step {
+      display: flex;
+      gap: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .step b {
+      color: var(--accent);
+      min-width: 28px;
+    }
+
+    .step strong {
+      display: block;
+    }
+
+    .step p {
+      margin: 4px 0 0;
+      color: var(--muted);
+    }
+
+    /* =========================================
+       TECHNOLOGY STACK
+    ========================================= */
+
+    .stack {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .chip {
+      padding: 9px 14px;
+      border: 1px solid #35475d;
+      border-radius: 8px;
+      color: #c9d8e8;
+      background: var(--panel);
+    }
+
+    /* =========================================
+       CONTACT
+    ========================================= */
+
+    .contact {
+      background: linear-gradient(
+        140deg,
+        #152b35,
+        #101824
+      );
+      border-radius: 20px;
+      padding: 65px;
+    }
+
+    .contact h2 {
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1.12;
+      letter-spacing: -0.05em;
+      margin: 16px 0;
+    }
+
+    .contact p {
+      color: var(--muted);
+      max-width: 620px;
+    }
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 35px 0;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .footer a:hover {
+      color: var(--accent);
+    }
+
+    /* =========================================
+       TABLET AND MOBILE
+    ========================================= */
+
+    @media (max-width: 780px) {
+
+      .links {
+        display: none;
+      }
+
+      .menu {
+        display: block;
+        background: none;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        color: var(--text);
+        padding: 8px 12px;
+      }
+
+      .mobilelinks.open {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 14px;
+        padding: 0 0 20px;
+      }
+
+      .mobilelinks a {
+        color: var(--muted);
+      }
+
+      .hero {
+        padding: 80px 0;
+      }
+
+      .stats {
+        margin-top: 65px;
+      }
+
+      .grid,
+      .workgrid,
+      .approach {
+        grid-template-columns: 1fr;
+      }
+
+      .sectionhead {
+        display: block;
+      }
+
+      .contact {
+        padding: 38px 26px;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+    }
+
+    @media (max-width: 480px) {
+
+      .wrap {
+        width: min(100% - 32px, 1140px);
+      }
+
+      .stats {
+        gap: 12px;
+      }
+
+      .stat strong {
+        font-size: 1.55rem;
+      }
+
+      .diagram {
+        gap: 5px;
+      }
+
+      .diagram span {
+        font-size: 0.65rem;
+        padding: 10px 6px;
+      }
+
+      .footer {
+        flex-direction: column;
+      }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      .btn,
+      .card {
+        transition: none;
+      }
+
+    }
+
+  </style>
 </head>
+
 <body>
-<header class="nav"><div class="wrap"><div class="navinner"><a class="logo" href="#top">alex<span>.</span>morgan</a><nav class="links" aria-label="Main navigation"><a href="#expertise">Expertise</a><a href="#work">Selected work</a><a href="#approach">Approach</a><a href="#about">About</a><a class="btn" href="#contact">Let's talk ↗</a></nav><button class="menu" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu(this)">☰ Menu</button></div><nav class="mobilelinks" id="mobilelinks" aria-label="Mobile navigation"><a href="#expertise">Expertise</a><a href="#work">Selected work</a><a href="#approach">Approach</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></header>
-<main id="top"><div class="wrap"><div class="hero"><div class="eyebrow">Independent software architect & developer</div><h1>Complex systems.<br><em>Clear solutions.</em></h1><p class="lead">I architect and build enterprise-grade software that scales with your business. Two decades of turning ambitious technical challenges into reliable, maintainable products.</p><div class="actions"><a class="btn" href="#contact">Discuss a project ↗</a><a class="btn outline" href="#work">Explore my work ↓</a></div><div class="stats"><div class="stat"><strong>20+</strong><small>Years of experience</small></div><div class="stat"><strong>Enterprise</strong><small>Systems & products</small></div><div class="stat"><strong>End-to-end</strong><small>Architecture to delivery</small></div></div></div></div>
-<section id="expertise"><div class="wrap"><div class="sectionhead"><div><div class="eyebrow">What I do</div><h2>Engineering for<br>the long term.</h2></div><p>From early technical direction to complex modernization, I help teams make sound architectural decisions and ship software built to last.</p></div><div class="grid"><article class="card"><div class="num">01 / ARCHITECTURE</div><h3>Software & systems architecture</h3><p>Designing scalable, secure, resilient platforms with pragmatic technical foundations and clear trade-offs.</p></article><article class="card"><div class="num">02 / ENGINEERING</div><h3>Enterprise application development</h3><p>Building robust web applications, APIs, integrations and business-critical systems from concept to production.</p></article><article class="card"><div class="num">03 / TRANSFORMATION</div><h3>Legacy modernization</h3><p>Untangling complexity, improving performance and evolving existing systems without disrupting the business.</p></article><article class="card"><div class="num">04 / PLATFORMS</div><h3>Cloud & infrastructure</h3><p>Architecting cloud-native services, deployment workflows and operational foundations for sustainable growth.</p></article><article class="card"><div class="num">05 / LEADERSHIP</div><h3>Technical leadership</h3><p>Providing hands-on engineering direction, architecture reviews and mentorship for high-performing teams.</p></article><article class="card"><div class="num">06 / DELIVERY</div><h3>Product engineering</h3><p>Bridging business requirements and technical execution to deliver useful, maintainable software.</p></article></div></div></section>
-<section id="work"><div class="wrap"><div class="sectionhead"><div><div class="eyebrow">Selected work</div><h2>Built for real-world<br>complexity.</h2></div><p>Representative project types. Replace these examples with your own case studies, outcomes and approved client details.</p></div><div class="workgrid"><article class="project"><div class="projectvisual"><div class="diagram"><span>Client apps</span><b>→</b><span>API layer</span><b>→</b><span>Core services</span></div></div><div class="projectbody"><span class="tag">Architecture</span><span class="tag">Enterprise SaaS</span><h3>Multi-tenant enterprise platform</h3><p>Reference case study: platform boundaries, data isolation, integration patterns and scaling strategy.</p></div></article><article class="project"><div class="projectvisual alt"><div class="diagram"><span>Legacy systems</span><b>→</b><span>Migration</span><b>→</b><span>Modern stack</span></div></div><div class="projectbody"><span class="tag">Modernization</span><span class="tag">Cloud</span><h3>Business-critical system modernization</h3><p>Reference case study: incremental migration, risk management and improved maintainability.</p></div></article></div></div></section>
-<section id="approach"><div class="wrap approach"><div><div class="eyebrow">How I work</div><h2>Thoughtful architecture. Practical execution.</h2><p>Good engineering is about more than choosing technologies. It's understanding the business, reducing unnecessary complexity and making decisions that hold up over time.</p></div><div class="steps"><div class="step"><b>01</b><div><strong>Understand the problem</strong><p>Clarify goals, constraints, stakeholders and the systems already in place.</p></div></div><div class="step"><b>02</b><div><strong>Design for the right trade-offs</strong><p>Choose architectures that balance scale, cost, security and maintainability.</p></div></div><div class="step"><b>03</b><div><strong>Build and validate</strong><p>Deliver iteratively, test assumptions early and keep quality visible.</p></div></div><div class="step"><b>04</b><div><strong>Enable long-term ownership</strong><p>Document key decisions and leave teams with systems they can confidently evolve.</p></div></div></div></div></section>
-<section id="about"><div class="wrap"><div class="sectionhead"><div><div class="eyebrow">About</div><h2>20 years building<br>what matters.</h2></div><p>I'm Alex Morgan, an independent developer and software architect focused on complex enterprise products. I work with organizations that need both deep technical thinking and the ability to get things built.</p></div><div class="eyebrow" style="margin-bottom:18px">Example capabilities — customize to your actual stack</div><div class="stack"><span class="chip">System design</span><span class="chip">Distributed systems</span><span class="chip">API architecture</span><span class="chip">Cloud platforms</span><span class="chip">Database design</span><span class="chip">Security by design</span><span class="chip">CI/CD</span><span class="chip">Technical strategy</span><span class="chip">Engineering leadership</span></div></div></section>
-<section id="contact"><div class="wrap"><div class="contact"><div class="eyebrow">Have something complex to build?</div><h2>Let's make it<br>work beautifully.</h2><p>Whether you're planning a new enterprise product, untangling a legacy system or looking for senior technical guidance, I'd be glad to hear about it.</p><div class="actions"><a class="btn" href="mailto:hello@example.com?subject=Project%20enquiry">Start a conversation ↗</a><a class="btn outline" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div></div></section></main>
-<footer><div class="wrap footer"><span>© <span id="year"></span> Alex Morgan. Built with purpose.</span><a href="#top">Back to top ↑</a></div></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();function toggleMenu(btn){const el=document.getElementById('mobilelinks');const open=el.classList.toggle('open');btn.setAttribute('aria-expanded',open)}document.querySelectorAll('.mobilelinks a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('mobilelinks').classList.remove('open');document.querySelector('.menu').setAttribute('aria-expanded','false')}));</script>
-</body></html>
+
+  <!-- =====================================
+       NAVIGATION
+  ====================================== -->
+
+  <header class="nav">
+
+    <div class="wrap">
+
+      <div class="navinner">
+
+        <a class="logo" href="#top">
+          alex<span>.</span>morgan
+        </a>
+
+        <nav class="links" aria-label="Main navigation">
+
+          <a href="#expertise">Expertise</a>
+
+          <a href="#work">Selected work</a>
+
+          <a href="#approach">Approach</a>
+
+          <a href="#about">About</a>
+
+          <a class="btn" href="#contact">
+            Let's talk ↗
+          </a>
+
+        </nav>
+
+        <button
+          class="menu"
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobilelinks"
+          onclick="toggleMenu(this)"
+        >
+          ☰ Menu
+        </button>
+
+      </div>
+
+      <nav
+        class="mobilelinks"
+        id="mobilelinks"
+        aria-label="Mobile navigation"
+      >
+
+        <a href="#expertise">Expertise</a>
+        <a href="#work">Selected work</a>
+        <a href="#approach">Approach</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main id="top">
+
+    <!-- =====================================
+         HERO
+    ====================================== -->
+
+    <div class="wrap">
+
+      <div class="hero">
+
+        <div class="eyebrow">
+          Independent software architect & developer
+        </div>
+
+        <h1>
+          Complex systems.<br>
+          <em>Clear solutions.</em>
+        </h1>
+
+        <p class="lead">
+          I architect and build enterprise-grade software
+          that scales with your business. Two decades of
+          turning ambitious technical challenges into
+          reliable, maintainable products.
+        </p>
+
+        <div class="actions">
+
+          <a class="btn" href="#contact">
+            Discuss a project ↗
+          </a>
+
+          <a class="btn outline" href="#work">
+            Explore my work ↓
+          </a>
+
+        </div>
+
+        <div class="stats">
+
+          <div class="stat">
+            <strong>20+</strong>
+            <small>Years of experience</small>
+          </div>
+
+          <div class="stat">
+            <strong>Enterprise</strong>
+            <small>Systems & products</small>
+          </div>
+
+          <div class="stat">
+            <strong>End-to-end</strong>
+            <small>Architecture to delivery</small>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================
+         EXPERTISE
+    ====================================== -->
+
+    <section id="expertise">
+
+      <div class="wrap">
+
+        <div class="sectionhead">
+
+          <div>
+
+            <div class="eyebrow">
+              What I do
+            </div>
+
+            <h2>
+              Engineering for<br>
+              the long term.
+            </h2>
+
+          </div>
+
+          <p>
+            From early technical direction to complex
+            modernization, I help teams make sound
+            architectural decisions and ship software
+            built to last.
+          </p>
+
+        </div>
+
+
+        <div class="grid">
+
+          <article class="card">
+
+            <div class="num">
+              01 / ARCHITECTURE
+            </div>
+
+            <h3>
+              Software & systems architecture
+           
